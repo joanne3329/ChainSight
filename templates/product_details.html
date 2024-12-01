@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>商品詳情</h2>
+    <p><strong>產品編號:</strong> {{ product.id }}</p>
+    <p><strong>分類:</strong> {{ product.category }}</p>
+    <p><strong>原產地:</strong> {{ product.location }}</p>
+    <p><strong>目前狀態:</strong> {{ product.status }}</p>
+    <p><strong>當前位置:</strong> {{ product.current_location }}</p>
+    <h3>歷史記錄</h3>
+    <ul>
+        {% for record in product.history %}
+        <li>{{ record.timestamp }} - {{ record.status }} ({{ record.location }})</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>供應鏈透明化系統</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">首頁</a></li>
+                    <li><a href="{{ url_for('add_product') }}">新增產品</a></li>
+                    <li><a href="{{ url_for('overview') }}">總攬</a></li>
+                    <li><a href="{{ url_for('query_product') }}">查詢產品</a></li>
+                    <li><a href="{{ url_for('view_blockchain') }}">區塊鏈結構</a></li>
+                    <li><a href="{{ url_for('visualization') }}">交易歷史</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="content">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 供應鏈透明化系統</p>
+        </div>
+    </footer>
+</body>
+</html>

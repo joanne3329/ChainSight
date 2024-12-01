@@ -1,0 +1,720 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F3F0; /* 米色背景 */
+    color: #333333; /* 深灰色文字 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 導航欄 */
+.navbar {
+    background-color: #D1CBC7; /* 灰褐色背景 */
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF; /* 白色文字 */
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+    margin: 0;
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #FFFFFF; /* 白色文字 */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #A88C8C; /* 深灰粉色懸停 */
+}
+
+/* 主內容區域 */
+main {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 英雄區域 */
+.hero-section {
+    text-align: center;
+    background-color: #FFFFFF; /* 白色背景 */
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片陰影 */
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    color: #333333; /* 深灰色主標題 */
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: #666666; /* 中灰色副標題 */
+    margin-top: 10px;
+}
+
+/* 功能區塊 */
+.features-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature {
+    background-color: #EFEFEF; /* 淺灰色背景 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* 平均分配寬度 */
+}
+
+.feature h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.feature .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #C8A7A7; /* 灰粉色 */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feature .button:hover {
+    background-color: #A88C8C; /* 深灰粉色 */
+    transform: scale(1.05);
+}
+
+/* 表單樣式 */
+.form-section {
+    padding: 50px 20px;
+    background-color: #FFFFFF; /* 表單背景白色 */
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片陰影 */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* 元素之間的間距 */
+}
+
+.form-container input,
+.form-container textarea {
+    width: 30%; /* 統一寬度 */
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #C8A7A7; /* 灰粉色邊框 */
+    border-radius: 8px; /* 圓角 */
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #C8A7A7; /* 灰粉色按鈕 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color: #A88C8C;
+    transform: scale(1.05);
+}
+
+/* 表格樣式 */
+.data-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #FFFFFF; /* 表格背景白色 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: #C8A7A7; /* 灰粉色表頭 */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #333;
+}
+
+/* 統一頁面標題樣式 */
+h2 {
+    font-size: 24px;
+    color: #333333; /* 深灰色 */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 統一輸入框和表單樣式 */
+.form-container input[type="text"],
+.form-container textarea {
+    width: 80%; /* 統一寬度 */
+    max-width: 600px; /* 限制最大寬度 */
+    margin: 10px auto;
+    display: block; /* 保證輸入框居中 */
+    padding: 10px;
+    border: 1px solid #C8A7A7; /* 灰粉色邊框 */
+    border-radius: 8px; /* 圓角設計 */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* 內陰影 */
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container textarea:focus {
+    border-color: #A88C8C; /* 聚焦邊框顏色 */
+    box-shadow: 0 0 8px rgba(168, 140, 140, 0.3); /* 聚焦外陰影 */
+    outline: none; /* 去除默認邊框 */
+}
+
+/* 表單提交按鈕統一 */
+.form-container button {
+    width: 50%; /* 按鈕寬度統一 */
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #C8A7A7; /* 按鈕灰粉色背景 */
+    color: white;
+    border: none;
+    border-radius: 8px; /* 圓角設計 */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color: #A88C8C; /* 深灰粉色懸停 */
+    transform: scale(1.05); /* 輕微放大 */
+}
+
+/* 表格行顏色交替 */
+.data-table tr:nth-child(odd) {
+    background-color: #F9F9F9; /* 奇數行背景色 */
+}
+
+.data-table tr:hover {
+    background-color: #F2EDED; /* 懸停行背景色 */
+}
+
+/* 頁腳統一間距和樣式 */
+.footer {
+    margin-top: 40px;
+    background-color: #D1CBC7; /* 灰褐色背景 */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid #C8A7A7; /* 灰粉色分割線 */
+}
+
+/* 功能塊間距優化 */
+.features-section {
+    gap: 40px; /* 增加功能塊間距 */
+    margin-top: 40px;
+}
+
+/* 查詢框內聯樣式調整 */
+.query-section input[type="text"] {
+    width: 60%; /* 查詢框略窄 */
+    max-width: 500px;
+    margin-right: 20px; /* 與按鈕保持距離 */
+    display: inline-block;
+}
+
+.query-section button {
+    display: inline-block;
+    margin-top: 0;
+}
+
+/* 表單分組樣式 */
+.form-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    color: #666666; /* 中灰色 */
+    margin-bottom: 5px;
+}
+
+.form-button {
+    padding: 10px 20px;
+    background-color: #C8A7A7; /* 灰粉色 */
+    color: white;
+    border: none;
+    border-radius: 8px; /* 圓角設計 */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+    background-color: #A88C8C; /* 深灰粉色 */
+    transform: scale(1.05); /* 懸停效果 */
+}
+
+/* 查詢結果區域樣式 */
+.query-results {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.query-results h3 {
+    font-size: 20px;
+    color: #333333; /* 深灰色 */
+    margin-bottom: 20px;
+}
+
+/* 區塊檢視頁樣式 */
+.block-details {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.block-details p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.block-details h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+/* 統一輸入框和按鈕樣式 */
+input[type="text"], textarea {
+    width: 30%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #C8A7A7; /* 灰粉色邊框 */
+    border-radius: 8px; /* 圓角 */
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #C8A7A7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 統一頁尾固定樣式 */
+.footer {
+    background-color: #D1CBC7;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* 表格統一樣式 */
+.data-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* 確保頁面可滾動 */
+body {
+    min-height: 100vh; /* 最小高度設為視窗高度 */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* 主內容區域自動撐開 */
+    padding-bottom: 30px; /* 頁尾高度的空間 */
+}
+
+.footer {
+    background-color: #D1CBC7; /* 灰褐色背景 */
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    position: relative; /* 不用絕對固定 */
+    width: 100%;
+    margin-top: auto; /* 推到頁面底部 */
+}
+
+.blockchain-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.block-card {
+    background-color: #EFEFEF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.visualization-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.blockchain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block {
+    background-color: #FFFFFF;
+    border: 1px solid #C8A7A7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: left;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #A88C8C;
+}
+
+.transactions {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #F9F9F9;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-step {
+    background-color: #EFEFEF;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-arrow {
+    font-size: 24px;
+    color: #A88C8C;
+    margin: 10px 0;
+}
+
+.location-block {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 統一框框樣式 */
+.card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.card h2, .card h3 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.card p, .card ul {
+    font-size: 16px;
+    color: #666666;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+/* 表單區域框框 */
+.form-container {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* 表單內的輸入框與按鈕 */
+.form-container input, .form-container select, .form-container textarea, .form-container button {
+    width: 90%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #C8A7A7;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-container button {
+    background-color: #C8A7A7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-container button:hover {
+    background-color: #A88C8C;
+    transform: scale(1.05);
+}
+
+/* 區塊鏈視覺化的框框 */
+.blockchain-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.block {
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.block h2 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.block p {
+    font-size: 14px;
+    color: #ededed;
+    margin-bottom: 5px;
+}
+
+/* Reset */
+body, h1, h2, p, ul, li, a, button, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F3F0; /* 米白背景 */
+    color: #333333; /* 主文字顏色 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #D1CBC7;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #A88C8C;
+}
+
+/* Content */
+main.content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form select, form textarea, form input[type="text"], form button {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #C8A7A7;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #C8A7A7;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #A88C8C;
+}
+
+/* Footer */
+.footer {
+    background-color: #D1CBC7;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

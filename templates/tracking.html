@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="product-details">
+    <h2>產品詳細資訊</h2>
+    <p><strong>產品編號：</strong>{{ product.id }}</p>
+    <p><strong>分類：</strong>{{ product.category }}</p>
+    <p><strong>原產地：</strong>{{ product.location }}</p>
+    <p><strong>狀態：</strong>{{ product.status }}</p>
+    <p><strong>描述：</strong>{{ product.description }}</p>
+    <h3>歷史狀態</h3>
+    <ul>
+        {% for history in product.history %}
+        <li>{{ history.timestamp }} - {{ history.status }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

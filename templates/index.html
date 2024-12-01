@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>供應鏈透明化系統</h1>
+    <p>基於區塊鏈技術，提供產品追蹤與驗證服務。</p>
+
+    <div class="features-section">
+        <div class="feature">
+            <h3>新增產品記錄</h3>
+            <p>輕鬆添加產品流通數據，確保信息透明。</p>
+            <a href="{{ url_for('add_product') }}" class="button">立即添加</a>
+        </div>
+        <div class="feature">
+            <h3>查詢產品履歷</h3>
+            <p>快速檢索產品履歷數據，驗證真實性。</p>
+            <a href="{{ url_for('query_product') }}" class="button">開始查詢</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

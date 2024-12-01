@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>區塊鏈結構視覺化</h2>
+<div class="blockchain-section">
+    {% for product in blockchain %}
+    <div class="block-card">
+        <h3>產品編號: {{ product.id }}</h3>
+        <p><strong>分類:</strong> {{ product.category }}</p>
+        <p><strong>目前狀態:</strong> {{ product.status }}</p>
+        <p><strong>當前位置:</strong> {{ product.current_location }}</p>
+        <h4>歷史記錄</h4>
+        <ul>
+            {% for record in product.history %}
+            <li>{{ record.timestamp }} - {{ record.status }} ({{ record.location }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

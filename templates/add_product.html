@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>新增產品</h2>
+<form method="POST">
+    <label for="category">商品分類:</label>
+    <select name="category" id="category" required>
+        {% for category in categories %}
+        <option value="{{ category }}">{{ category }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="location">乳品原產地:</label>
+    <select name="location" id="location" required>
+        {% for code, name in locations.items() %}
+        <option value="{{ code }}">{{ name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="description">描述:</label>
+    <textarea name="description" id="description" required></textarea>
+
+    <button type="submit">新增</button>
+</form>
+{% endblock %}

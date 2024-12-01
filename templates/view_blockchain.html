@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="blockchain-section">
+    <h2>區塊鏈結構</h2>
+    {% for product in blockchain %}
+    <div class="block-card">
+        <p><strong>產品編號：</strong>{{ product.id }}</p>
+        <p><strong>分類：</strong>{{ product.category }}</p>
+        <p><strong>原產地：</strong>{{ product.location }}</p>
+        <p><strong>描述：</strong>{{ product.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

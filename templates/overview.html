@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>商品總攬</h2>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>產品編號</th>
+                <th>分類</th>
+                <th>原產地</th>
+                <th>目前狀態</th>
+                <th>當前位置</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.location }}</td>
+                <td>{{ product.status }}</td>
+                <td>{{ product.current_location }}</td>
+                <td>
+                    <a href="{{ url_for('update_status', product_id=product.id) }}">更新狀態</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
