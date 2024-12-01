@@ -105,4 +105,6 @@ def visualization():
     return render_template("visualization.html", blockchain=products)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Render 提供的 PORT 環境變數
+    app.run(host="0.0.0.0", port=port)       # 綁定到 0.0.0.0 和指定的端口
